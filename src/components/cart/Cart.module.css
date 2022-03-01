@@ -1,0 +1,49 @@
+.cartStyle{
+    position: absolute;
+    position: fixed;
+    width: 60%;
+    background-color: white;
+    top:  40%;
+    right: 20%;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    filter: drop-shadow( 0px 0px .5rem rgb(78, 78, 78));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.backgroundStyle{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cartStyle button{
+    cursor: pointer;
+    width: 140px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(59, 22, 94);
+    font-weight: 700;
+    background-color: white;
+    font-size: large;
+    color: rgb(59, 22, 94);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cartStyle button:hover{
+    color: rgba(170, 7, 7, 0.795);
+    border: 1px solid rgba(170, 7, 7, 0.795);
+}
