@@ -11,6 +11,8 @@ const Login = (props) => {
   const [warning, setWarning] = useState(false);
 
   const dispatch = useDispatch();
+ 
+
   useEffect(() => {
     const fetchMarketData = async () => {
       const response = await fetch(
@@ -51,11 +53,12 @@ const Login = (props) => {
 
       const tempArr = [];
       for (const key in data) {
-        tempArr.push({
+        tempArr.push(
           ...data[key].items,
-        });
+        );
       }
     
+   
       setOrderData(tempArr);
     };
     try {
@@ -88,10 +91,14 @@ const Login = (props) => {
 
    
     const orderofMarket = orderData.filter(
-      (item) => item.marketID === market.marketID
+      (item) => item.marketID === market[0].marketID
     );
+   
 
-        console.log(orderofMarket)
+        console.log("orderofMarket",orderofMarket);
+        // console.log(market[0]);
+        // console.log(orderData);
+        // console.log(marketData)
     dispatch(loginActions.addtoItemsOrder(orderofMarket));
   };
 

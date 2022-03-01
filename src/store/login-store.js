@@ -13,13 +13,15 @@ const LoginSlice = createSlice({
     },
     addtoItemsOrder(state, action) {
       const newItem = action.payload;
-      state.items.push({
-        name: newItem.name,
-        id: newItem.id,
-        price: newItem.price,
-        marketID: newItem.marketID,
-        quantity: newItem.quantity,
-      });
+      for( const key in newItem){
+        state.items.push({
+          name: newItem[key].name,
+          id: newItem[key].id,
+          price: newItem[key].price,
+          marketID: newItem[key].marketID,
+          quantity: newItem[key].quantity,
+        });
+      }
     },
   },
 });
