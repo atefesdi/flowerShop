@@ -9,6 +9,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: initialState,
   reducers: {
+   
     replaceItems(state, action) {
       state.items = action.payload.items;
     },
@@ -59,6 +60,9 @@ const cartSlice = createSlice({
       state.items = state.items.filter((item) => item.id !== removeItemID);
       state.totalQuantity--;
     },
+    resetCart(){
+      return initialState
+    }
   },
 });
 export const cartAction = cartSlice.actions;
